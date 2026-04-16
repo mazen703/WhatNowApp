@@ -1,0 +1,2 @@
+# WhatNowApp
+Simple News App 

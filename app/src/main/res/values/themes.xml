@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.NewsApp" parent="Theme.Material3.DayNight.NoActionBar" />
+
+    <style name="Theme.NewsApp.Splash" parent="Theme.SplashScreen">
+
+        <!-- background -->
+        <item name="windowSplashScreenBackground">@color/primary</item>
+
+        <!-- icon -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/frame2</item>
+
+        <!-- بدون animation -->
+        <item name="windowSplashScreenAnimationDuration">0</item>
+
+        <!-- الثيم بعد السبلش -->
+        <item name="postSplashScreenTheme">@style/Base.Theme.NewsApp</item>
+
+    </style>
+
+</resources>

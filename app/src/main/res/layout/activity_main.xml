@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.MainActivity">
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Flexbox Chips -->
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:flexWrap="wrap"
+            app:justifyContent="space_between">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipGeneral"
+                android:checked="true"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_flexGrow="1"
+
+                android:text="General"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:minHeight="36dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSports"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_flexGrow="1"
+
+                android:text="Sports"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:minHeight="36dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTechnology"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_flexGrow="1"
+
+                android:text="Technology"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:minHeight="36dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipScience"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_flexGrow="1"
+
+                android:text="Science"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:minHeight="36dp"/>
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            tools:listitem="@layout/article_list_item" />
+
+    </LinearLayout>
+
+    <!-- Loader -->
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>
